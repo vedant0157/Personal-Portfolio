@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Vedant Gaikwad-Portfolio </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/VG.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+<style> 
+  #about, #resume, #skills, #Projects, #contact {
+  padding: 15px 10px 0px; 
+}
+
+
+  .logo-wrapper {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  }
+
+  .logo1 {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  object-fit: cover;
+  border: 2px solid #ddd; 
+  margin: 0 10px; 
+  }
+
+  .logo2{
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  object-fit: contain;
+  border: 2px solid #ddd; 
+  margin: 0 10px;
+  }
+
+  .logo2:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+
+.logo1:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+
+
+  .Download{
+   margin-left: 47.5%;
+   padding: 5px 25px;
+   border: 2px solid rgb(0, 0, 0);
+   background-color: rgb(0, 174, 255);
+   border-radius: 12%;
+  }
+
+  .Downloadbutton{
+    text-decoration-color: black;
+    
+  }
+  .Download:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+    
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const submitButton = document.getElementById('send-message-button');
+    const sentMessageDiv = document.querySelector('.sent-message');
+    
+    function isFormValid() {
+      let valid = true;
+      const requiredFields = form.querySelectorAll('[required]');
+      const emailField = form.querySelector('input[type="email"]');
+      
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+        }
+      });
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailField && !emailRegex.test(emailField.value.trim())) {
+        valid = false;
+        alert('Please enter a valid email address.');
+      }
+      
+      return valid;
+    }
+    
+    submitButton.addEventListener('click', function() {
+      if (isFormValid()) {
+        sentMessageDiv.style.display = 'block';
+        
+      
+        setTimeout(function() {
+          sentMessageDiv.style.display = 'none';
+          form.reset();
+        }, 3000);
+      } else {
+        alert('Please fill in all required fields correctly.');
+      }
+    });
+  });
+  </script>
+  
+    
+  
+    
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/Vedant.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Vedant Gaikwad</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://x.com/vedant_2509" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/vedant.gaikwad.1044?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/vedant_gaikwad_2509/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/vedant0157" target="_blank" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/vedant-gaikwad-267136216" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#skills"><i class="bi bi-person navicon"></i> Skills</a></li>
+        <li><a href="#Projects"><i class="bi bi-person navicon"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg2.png" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Vedant </h2>
+        <h2>Gaikwad</h2>
+        <p>I'm <span class="typed" data-typed-items="Full Stack Developer">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section  id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>“Enthusiastic full stack developer with a knack for crafting engaging web applications from scratch, blending front-end finesse with back-end innovation to bring ideas to life and solve complex challenges with creativity and precision.”</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/Media.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content" style="margin-bottom: 150px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <h2>Full Stack Developer</h2>
+              <button class="Download" >
+              <a class="Downloadbutton" style="color:black" href="assets/pdf/Vedant Gaikwad.pdf"  download >Download</a>
+            </button>
+          </div>
+          
+            <p class="fst-italic py-3" style="margin-bottom: 50px; margin-top: 25px;">
+              "Dedicated to delivering exceptional web solutions with the understanding that quality work takes time and care, ensuring every project is meticulously crafted even under demanding conditions."
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>13 May 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BE</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 9881196342</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Shirur, Pune</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Specialization:</strong> <span>Computer Science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>vedantgaikwad0157@gmail.com</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
+                </ul>
+              </div>
+         
+        </div>
+        
+
+      </div>
+
+    </section><!-- /About Section -->
+
+     <!-- Resume Section -->
+     <section id="resume" class="resume section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sumary</h2>
+        <p>"Dedicated to delivering exceptional web solutions with the understanding that quality work takes time and care, ensuring every project is meticulously crafted even under demanding conditions."</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering (Computer Science)</h4>
+              <h5>2020 - 2024</h5>
+              <p><em>Ajeenkya D Y Patil School of Engineering, Pune</em></p>
+              <p>CGPA : 7.85/10</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4> MHBSHSE (Science)</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>Sau. Hirabai Gopalrao Gaikwad Jr. College of Science, Kasari</em></p>
+              <p>Percentage : 69.38/100</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4> MHBSHSE (SSC)</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Vidhyadham Prashala, Shirur</em></p>
+              <p>Percentage : 85.60/100</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional experience</h3>
+            <div class="resume-item">
+              <h4>Trainee Engineer</h4>
+              <h5>Sept 2024 - Present</h5>
+              <p><em>Enkinlab India Pvt Ltd., Pune </em></p>
+              <ul>
+                <li>Quickly adapted to new tools and development processes, integrating seamlessly into the team workflow.</li>
+                <li>Made meaningful contributions to coding and debugging tasks, helping advance project goals effectively. </li>
+                <li>Actively engaged in team meetings and learning sessions, enhancing skills and contributing to team discussions.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Java Developer Intern</h4>
+              <h5>Feb 2024 - April 2024</h5>
+              <p><em>Lets Grow More</em></p>
+              <ul>
+                <li>Developed and maintained Java-based applications, focusing on enhancing functionality and optimizing performance.</li>
+                <li>Collaborated with the development team to design and implement new features, ensuring alignment with project requirements and best practices.</li>
+                <li>Gained hands-on experience with debugging and testing, contributing to the identification and resolution of software issues.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+     
+     
+    </section><!-- /Resume Section -->
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>"Skilled in developing user-friendly interfaces with seamless interaction capabilities."</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation" style="padding: 0px 25px 45px 25px;">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>OOPS</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Java</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>SQL/MySQL</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Bootstrap</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>MongoDB</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container logo-section">
+        <div class="logo-wrapper">
+          <img src="assets/img/Java.png" alt="Logo 1" class="logo1">
+          <img src="assets/img/Html.png" alt="Logo 2" class="logo2">
+          <img src="assets/img/CSS.png" alt="Logo 3" class="logo2">
+          <img src="assets/img/Bootstrap.png" alt="Logo 4" class="logo1">
+          <img src="assets/img/JS.png" alt="Logo 5" class="logo1">
+          <img src="assets/img/MongoDb.png" alt="Logo 6" class="logo1">
+          <img src="assets/img/Mysql.png" alt="Logo 6" class="logo2">
+        </div>
+      </div>
+      
+
+    </section><!-- /Skills Section -->
+
+    <section id="Projects" class="testimonials section light-background">
+
+     
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>
+          "Successfully executed diverse projects, demonstrating strong problem-solving abilities and innovative solutions."</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>
+                      "Created a real-time multilingual railway announcement system that generates dynamic, human-like announcements, replacing traditional recordings and overcoming language barriers."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <a href="https://github.com/vedant0157/Railway-announcement-system" target="_blank">
+                <img src="assets/img/RAS (2).png" class="testimonial-img" alt="">
+                </a>
+                <h3>Railway-announcement-system</h3>
+                <h4>Java &amp; JS</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"Developed a secure software solution that uses QR codes to provide real-time emergency contact details for car owners, enhancing rapid communication and ensuring up-to-date information during critical situations."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <a href="https://github.com/vedant0157/Vidya" target="_blank">
+                <img src="assets/img/Qr.jpg" class="testimonial-img" alt="">
+                </a>
+                <h3>QR Code for Accidental Victim</h3>
+                <h4>Java &amp; MySQL</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"Engineered a comprehensive bank management system using Java and MySQL, streamlining financial operations and data management with robust, secure functionality."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <a href="https://github.com/vedant0157/Bank-Management-System" target="_blank">
+                <img src="assets/img/Bank Management.png" class="testimonial-img" alt="">
+                </a>
+                <h3>Bank Management system</h3>
+                <h4>Java &amp; MySQL</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"Created a Java-based mess finder app that efficiently locates and manages food tiffin services, streamlining the search for meal options and delivery details."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <a href="https://github.com/vedant0157/Mess" target="_blank">
+                <img src="assets/img/Mess.png" class="testimonial-img" alt="">
+                </a>
+                <h3>Mess Finder</h3>
+                <h4>Java</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"Built a clone of Amazon using HTML and CSS, replicating the e-commerce platform’s layout and design for a hands-on understanding of web development."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <a href="https://github.com/vedant0157/Amazon-clone" target="_blank">
+                <img src="assets/img/amazon.png" class="testimonial-img" alt="">
+                </a>
+                <h3>Amazon Clone</h3>
+                <h4>HTML &amp; CSS</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> 
+
+   
+   
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>For contact Refer Below Details</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Home no 2015, Joshiwadi, Shirur, 412210</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <a href="tel:+919881196342" target="_blank" style="color:black">+91 9881196342</a>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <a href="mailto:vedantgaikwad0157@gmail.com" target="_blank" style="color:black">vedantgaikwad0157@gmail.com</a>
+                </div>
+              </div><!-- End Info Item -->
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.3884126806033!2d74.38258107550506!3d18.825389882328313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc32d09c88d5a29%3A0xe907f794bc9a4bf9!2sVDO.%20Shashikant%20Gaikwad%20House!5e0!3m2!1sen!2sin!4v1725878756095!5m2!1sen!2sin" width="425" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form id="contact-form" action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="sent-message ">Your message has been sent. Thank you!</div>
+                  
+                  <button type="submit" id="send-message-button" >Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by Vedant Gaikwad
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
